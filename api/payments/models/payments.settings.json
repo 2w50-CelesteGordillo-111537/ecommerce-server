@@ -1,0 +1,29 @@
+{
+  "kind": "collectionType",
+  "collectionName": "payments",
+  "info": {
+    "name": "Payments",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "amount": {
+      "type": "string"
+    },
+    "date": {
+      "type": "datetime"
+    },
+    "userId": {
+      "plugin": "users-permissions",
+      "model": "role"
+    },
+    "orderId": {
+      "model": "order"
+    }
+  }
+}
